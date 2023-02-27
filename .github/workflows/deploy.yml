@@ -44,11 +44,11 @@ jobs:
           mkdir -p dist
           /bin/ls slides | while read line ; do pnpm -F "$line" run build --base "/${{ github.event.repository.name }}/$line" -o "../../dist/$line" ; done
       - name: Generate Directory Listings
-        uses: jayanta525/github-pages-directory-listing@v2.0.0
+        uses: kxxt/github-pages-directory-listing@v2
         with:
           FOLDER: dist
       - name: Deploy pages
-        uses: kxxt/ghaction-github-pages@v2
+        uses: crazy-max/ghaction-github-pages@v2
         with:
           build_dir: dist
         env:
