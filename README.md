@@ -1,6 +1,6 @@
 # slidev-template-repo
 
-A template repo for slidev slides which deploys to github pages on push.
+A template repo for slidev slides with automatic GitHub Pages deployment.
 
 Example: https://kxxt.github.io/slidev-template-repo
 
