@@ -40,7 +40,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --shamefully-hoist
       - name: Build slides
-        run: /bin/ls slides | while read line ; do pnpm -F "$line" run build --base "/$line" -o "dist/$line" ; done
+        run: |
+          mkdir -p dist
+          /bin/ls slides | while read line ; do pnpm -F "$line" run build --base "/$line" -o "dist/$line" ; done
       - name: Deploy pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
