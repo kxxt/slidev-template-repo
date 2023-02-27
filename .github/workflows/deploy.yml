@@ -42,7 +42,7 @@ jobs:
       - name: Build slides
         run: |
           mkdir -p dist
-          /bin/ls slides | while read line ; do pnpm -F "$line" run build --base "/$line" -o "dist/$line" ; done
+          /bin/ls slides | while read line ; do pnpm -F "$line" run build --base "/$line" -o "../../dist/$line" ; done
       - name: Deploy pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
