@@ -2,6 +2,12 @@
 
 A template repo for slidev slides which deploys to github pages on push.
 
+## Features
+
+- Deploys to GitHub Pages on push
+- Uses [pnpm](https://pnpm.io/) for dependency management
+- Generates a directory index for the slides
+
 ## Usage
 
 1. Click the "Use this template" button to create a new repo
