@@ -48,7 +48,7 @@ jobs:
         with:
           FOLDER: dist
       - name: Deploy pages
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: kxxt/ghaction-github-pages@v2
         with:
           build_dir: dist
         env:
