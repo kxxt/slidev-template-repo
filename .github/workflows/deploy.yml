@@ -41,6 +41,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --shamefully-hoist
       - name: Build slides
+        env:
+          NODE_OPTIONS: --max_old_space_size=4096
         run: |
           mkdir -p dist
           /bin/ls slides | while read line ; do pnpm -F "$line" run build --base "/${{ github.event.repository.name }}/$line" -o "../../dist/$line" ; done
